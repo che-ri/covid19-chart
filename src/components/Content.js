@@ -66,7 +66,7 @@ const Content = () => {
                 datasets: [
                     {
                         label: "국내 누적 확진자",
-                        backgroundColor: "#ff7979",
+                        backgroundColor: "#f53b57",
                         fill: true,
                         data: arr.map((a) => a.confirmed),
                     },
@@ -77,14 +77,14 @@ const Content = () => {
                 datasets: [
                     {
                         label: "월별 격리자 현황",
-                        borderColor: "#badc58",
+                        borderColor: "#0be881",
                         fill: false,
                         data: arr.map((a) => a.active),
                     },
                 ],
             });
             const lastMonth = arr[arr.length - 1];
-            const DoughnutChartColor = ["#ff3d67", "#059bff", "#ffc233"];
+            const DoughnutChartColor = ["#f53b57", "#ffdd59", "#1e90ff"];
             setlastMonthData({
                 labels: ["확진자", "격리해제", "사망"],
                 datasets: [
