@@ -3,9 +3,7 @@ import { Bar, Doughnut, Line } from "react-chartjs-2";
 import axios from "axios";
 
 const Content = () => {
-    {
-        /* 데이터를 confirmedData에 넣는다. */
-    }
+    // 데이터를 confirmedData에 넣는다.
     const [confirmedData, setConfirmedData] = useState({});
     const [quarantinedData, setQuarantinedData] = useState({});
     const [lastMonthData, setlastMonthData] = useState({});
@@ -17,6 +15,7 @@ const Content = () => {
             const res = await axios.get(
                 "https://api.covid19api.com/dayone/country/kr"
             );
+            console.log(res);
             //data를 모두 받아온다음에 그다음 순서를 실행하기 위해, async와 await를 사용한다.
             makeData(res.data);
         };
